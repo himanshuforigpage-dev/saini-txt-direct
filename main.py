@@ -351,7 +351,7 @@ async def txt_handler(bot: Client, m: Message):
 
         await editable.edit(f"**•ᴛᴏᴛᴀʟ 🔗 ʟɪɴᴋs ғᴏᴜɴᴅ ᴀʀᴇ --__{len(links)}__--\n•sᴇɴᴅ ғʀᴏᴍ ᴡʜᴇʀᴇ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ**")
         try:
-            input0: Message = await bot.listen(editable.chat.id, timeout=20)
+            input0: Message = await bot.listen(editable.chat.id, timeout=60)
             raw_text = input0.text
             await input0.delete(True)
         except asyncio.TimeoutError:
